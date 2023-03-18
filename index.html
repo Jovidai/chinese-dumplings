@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:title" content="Exploring the Dumpling Landscape of China" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://kevinlu4588.github.io/DumplingWebsite/" />
+      <meta property="og:description" content="Interactive website about the diversity of dumplings in Chinese cuisine" />
+      <meta property="og:locale-language" content="English" />
+
+      <title>Exploring the Dumpling Landscape of China</title>
+      <!--d3.js--> 
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/topojson@3"></script>
+      <script src="flickity.pkgd.min.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <!-- Meta tags for SEO and social sharing -->
+      <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+      <meta
+         name="description"
+         content="A simple website, built with Glitch. Remix it to get your own."
+         />
+      <!-- Import the webpage's stylesheet -->
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <link rel="stylesheet" href="style.css">
+      <!-- map CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+         crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+         crossorigin=""></script>
+      <!-- Icon -->
+      <link rel="icon" type="image/x-icon" href="images/Dumplings-Transparent-PNG.png">
+   </head>
+   <body>
+      <div class="intro">
+         <div id="banner">
+            <!--JavaScript files-->
+            <script src="banner.js"></script>
+          
+            <!-- Content -->
+            <h1 style="text-shadow: 5px 3.5px #CACFD2;">
+               <span>Exploring the Dumpling Landscape of China</span>
+            </h1>
+            <h2 style="text-shadow: 1px 3px #CACFD2;">
+               <span>Discover the unique history and diversity of dumpling cuisine</span> 🍅🥫🌶
+               <br>
+               </h3>
+         </div>
+         <br>
+         <br>
+         <br>
+         <div class='main-container'>
+         <h1 id="paragraph;"> What are the Chinese dumplings?</span></h2>
+         <p class="firstpara">Dumplings are not just a mere delicious snack. They carry a rich significance that dates back to Ancient China 1,800 years ago. 
+         Also known as <mark><a href="https://en.wikipedia.org/wiki/Jiaozi">Jiaozi</a></mark>, these Chinese dumplings commemorate an exciting incident of the past and have now become a part of many lives.
+         </p>
+         <p class="firstpara">Jiaozare served Chinese families at different times of the year. In ancient times, Jiaozi was not common and was treated as a luxurious food for ordinary people. People make Jiaozi celebrate important festivals and dates.</p>
+         <p class="firstpara">On the night of Chinese New Year's Eve, Jiaozi is usually served at the stroke of midnight after a big dinner. The name Jiaozi sounds similar to an old Chinese saying, <mark>"stepping into a new era,"</mark> and thus carries the meaning when people eat them at the moment of New Year. The remaining Jiaozi are stored in the refrigerator and reboiled or fried for breakfast.</p>
+         <p class="firstpara">Particularly in Northern China, people generally eat dumplings on the <mark><a href="https://en.wikipedia.org/wiki/Winter_solstice">winter solstice</a></mark> in the hope of a warm winter. Extended family members may gather together to make dumplings, which are also eaten at farewells to family members or friends.</p>
+         </div>
+         <br>
+         <div onclick="transition()">
+            <button class="dumpling-button" id="start-button">
+            <img src="images/dumpstart.png" alt="buttonpng" border="0" class="dumpling"/>
+            </button>
+         </div>
+         <p><img src=https://i.ibb.co/F46sQh5/Borde.png width=1500></p>
+         <br>
+      </div>
+      <div id="caros">
+      <h1 id="scroll-target" class="header">
+         <audio autoplay src = "audio/northeastChina.mp4" id="audio"></audio>
+         Let's go exploring!
+      </h1>
+      
+      <h1 class="question">
+         <audio autoplay src = "audio/northeastChina.mp4" id="audio"></audio>
+         What dumpling shape looks most appetizing to you?      
+      </h1>
+      <div class="main-carousel">
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/potstickers.png" id="potstickers">
+         </div>
+         <div class="carousel-cell">
+            <img  class= "dumpling" src="images/wonton.png">
+         </div>
+         <div class="carousel-cell">
+            <img class = "dumpling" src= "images/xiaologbao.png" id="xiaolongbao">
+         </div>
+      </div>
+      <h1 class = "question">
+         <p>
+            What filling does your stomach grumble for?
+         </p>
+      </h1>
+      <div class="main-carousel1">
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/jiucai.png" id = "jiucai">
+         </div>
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/porkFilling.png">
+         </div>
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/fishDumpling.png" id = "fishDumpling">
+         </div>
+      </div>
+      <h1 class = "question">
+         <p>
+            Which sauce do your tastebuds quiver for?
+         </p>
+      </h1>
+      <div class="main-carousel2">
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/spicy.png">
+         </div>
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/vinegar.png" id="vinegar">
+         </div>
+         <div class="carousel-cell">
+            <img class= "dumpling" src="images/hoisin.png" id="hoisin">
+         </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div onclick="finish()">
+         <button class = "dumpling-button" id="finish-button">
+         <img src="images/button.png" alt="buttonpng" border="0" class="dumpling"/>
+         </button>
+      </div>
+      <br>
+      <div class = "end-text" id = "end-text">
+         <span> 3</span>
+         <h2>
+            Time for dumpling text!!
+         </h2>
+      </div>
+      <!--
+         <script>
+           
+         var elem = document.querySelector('.main-carousel');
+           
+         var flkty = new Flickity( elem, {
+         // options
+         cellAlign: 'left',
+         contain: true
+         
+         });
+         
+         // element argument can be a selector string
+         //   for an individual element
+         var flkty = new Flickity( '.main-carousel', {
+         // options
+         
+         });
+         
+         </script>
+         -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+      <script src="script.js"></script>
+      <script>
+         function finish(){
+          console.log("Finish");
+          const element = document.getElementById("end-text");
+          console.log(element);
+          element.style.opacity = 1;
+         }
+         
+         function transition(){
+         element = document.getElementById("audio");
+         element.play();
+         }
+      </script>
+      <br>
+      <br>
+      <br>
+      <p><img src=https://i.ibb.co/F46sQh5/Borde.png width=1500></p>
+      <h1 id="paragraph">
+         A map of dumpling's region of origins in China
+      </h1>
+      <h2 id="paragraph">
+         You can zoom in or zoom out to check the specific regions of origins of dumplings
+      </h2>
+      <div id="map"></div>
+      <!--JavaScript files-->
+      <script src="map.js"></script>
+      <br>
+      <h3 id="paragraph" style="color: #CACFD2;">
+         * The <span class="color1">yellow color</span> in the map represents Western regions, the <span class="color2">blue color</span> represents Southern regions, and the <span class="color3">green color</span> represents Northern regions.
+      </h3>
+      <h3 id="paragraph" style="color: #CACFD2;">
+         * Because this is a basic sketch, the Chinese regions marked on the map are only an approximate range, which may involve some other countries, 
+         but we will make more precise modifications and improvements in the formal design.
+      </h3>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   </body>
+</html>
